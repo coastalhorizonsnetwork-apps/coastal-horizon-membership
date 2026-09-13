@@ -1,38 +1,21 @@
-# Coastal Horizon Network — Membership Application
+# Coastal Horizon Network — Cloudflare Worker
 
-A responsive, CHN-branded membership application and 69-question knowledge exam.
+This repository is structured as a Cloudflare Worker with Static Assets.
 
-## Features
-- CHN cyan/teal visual identity
-- Applicant profile
-- 8 exam categories
-- 69 multiple-choice questions
-- Live progress tracking
-- 80% passing score
-- Final membership agreements
-- Discord call-to-action
-- Mobile responsive
-- GitHub Pages ready
+## Deploy with Wrangler
 
-## Categories
-1. Community Knowledge — 8
-2. Community Rules — 15
-3. Discord & Communication — 8
-4. Gaming & Roleplay Standards — 8
-5. Staff & Chain of Command — 8
-6. Scenario-Based Questions — 10
-7. Community Safety — 7
-8. Final Agreement — 5
+npm install
+npx wrangler login
+npx wrangler secret put DISCORD_WEBHOOK_URL
+npx wrangler deploy
 
-## Run locally
-Open `index.html` in a browser.
+When prompted for the secret, paste your regenerated Discord webhook URL.
 
-## GitHub Pages
-Repository Settings → Pages → Deploy from branch → `main` → `/(root)`.
+## Cloudflare dashboard
 
-## Discord
-The application uses the CHN invite:
-https://discord.gg/dH7gWCJgyu
+Import this repository as a Worker, not a static-only Pages site. Then add:
+Settings → Variables and Secrets → Secret
 
-## Important
-This version is a front-end application. It calculates the result in the browser but does not send applicant data to a server. For production use, connect the submit handler to a secure backend, database, or approved form endpoint. Never put a Discord webhook secret in client-side JavaScript.
+Name: DISCORD_WEBHOOK_URL
+
+The webhook URL is intentionally not committed to GitHub.
