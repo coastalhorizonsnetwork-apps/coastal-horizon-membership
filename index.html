@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Coastal Horizon Network Membership Application">
+  <title>CHN | Membership Application</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-orb orb-a"></div><div class="bg-orb orb-b"></div>
+  <main class="shell">
+    <header class="hero">
+      <div class="brand">
+        <div class="brand-mark">◒</div>
+        <div><strong>COASTAL <span>HORIZON</span></strong><small>NETWORK</small></div>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">GAMERS • CREATORS • COMMUNITIES • BEYOND</p>
+        <h1>MEMBERSHIP <span>APPLICATION</span></h1>
+        <p>A HORIZON FOR EVERY GAMER</p>
+      </div>
+      <a class="discord-mini" href="https://discord.gg/dH7gWCJgyu" target="_blank" rel="noopener">DISCORD ↗</a>
+    </header>
+
+    <section id="intro" class="panel intro">
+      <div class="intro-icon">✦</div>
+      <div>
+        <p class="eyebrow">WELCOME TO CHN</p>
+        <h2>Take the first step toward joining the network.</h2>
+        <p>Complete the member profile and knowledge exam. The exam contains 69 questions across 8 categories. A score of 80% or higher is required to pass.</p>
+      </div>
+    </section>
+
+    <form id="applicationForm" novalidate>
+      <section class="panel profile">
+        <div class="section-title"><span>01</span><div><p class="eyebrow">APPLICANT PROFILE</p><h2>Tell us about yourself</h2></div></div>
+        <div class="grid">
+          <label>Display Name<input name="displayName" required placeholder="Your preferred name"></label>
+          <label>Discord Username<input name="discord" required placeholder="username or username#0000"></label>
+          <label>Primary Platform<select name="platform" required><option value="">Select</option><option>PlayStation</option><option>Xbox</option><option>PC</option><option>Multi-platform</option></select></label>
+          <label>Gamer Tag<input name="gamertag" required placeholder="PSN / Xbox / Steam / other"></label>
+          <label class="full">Why do you want to join Coastal Horizon Network?<textarea name="why" required minlength="20" placeholder="Tell us what you are looking for in the community..."></textarea></label>
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar panel">
+          <p class="eyebrow">EXAM CATEGORIES</p>
+          <nav id="categoryNav"></nav>
+          <div class="progress-box">
+            <p>YOUR PROGRESS</p><div class="progress"><i id="progressBar"></i></div>
+            <strong><span id="progressText">0</span> / 69</strong><small id="progressPct">0%</small>
+          </div>
+        </aside>
+
+        <section class="exam-area">
+          <div class="panel exam-header">
+            <p class="eyebrow">KNOWLEDGE • INTEGRITY • COMMUNITY</p>
+            <h2 id="categoryHeading">Community Knowledge</h2>
+            <p id="categoryDescription"></p>
+          </div>
+          <div id="questions"></div>
+          <div class="exam-actions panel">
+            <button type="button" class="btn secondary" id="prevBtn">← PREVIOUS</button>
+            <span id="pageCounter">CATEGORY 1 OF 8</span>
+            <button type="button" class="btn primary" id="nextBtn">NEXT CATEGORY →</button>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel agreement">
+        <div class="section-title"><span>08</span><div><p class="eyebrow">FINAL AGREEMENT</p><h2>Ready to submit?</h2></div></div>
+        <label class="check"><input type="checkbox" name="agree" required> I confirm that my answers are truthful and that I agree to follow Coastal Horizon Network rules and staff direction.</label>
+        <label class="check"><input type="checkbox" name="privacy" required> I understand that submitting this application does not guarantee membership and that CHN staff may review my application.</label>
+        <button class="btn primary submit" type="submit">SUBMIT MEMBERSHIP APPLICATION →</button>
+      </section>
+    </form>
+
+    <section id="result" class="panel result hidden">
+      <div class="result-icon" id="resultIcon">✓</div>
+      <p class="eyebrow">APPLICATION COMPLETE</p>
+      <h2 id="resultTitle"></h2>
+      <p id="resultMessage"></p>
+      <div class="score"><span id="scoreValue">0%</span><small>EXAM SCORE</small></div>
+      <a class="btn primary" href="https://discord.gg/dH7gWCJgyu" target="_blank" rel="noopener">CONTINUE TO DISCORD →</a>
+    </section>
+
+    <footer><span>COASTAL <b>HORIZON</b> NETWORK</span><span>CONNECT • PLAY • CREATE • BELONG</span><span>SAME HORIZON • DIFFERENT STORIES • ONE COMMUNITY</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
